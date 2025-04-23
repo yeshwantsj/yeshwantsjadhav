@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yeshwant S. Jadhav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .profile-container {
+      max-width: 900px;
+      margin: 60px auto 100px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-photo {
+      flex-shrink: 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #0077cc;
+    }
+
+    .profile-info h3 {
+      margin: 5px 0;
+      color: #444;
+      font-weight: normal;
+    }
+
+    .profile-info p {
+      color: #666;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+    }
+
+    .contact-details p {
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #005fa3;
+    }
+
+    .chat-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: white;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 10000;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .chat-icon:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,123,255, 0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(0,123,255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,123,255, 0); }
+    }
+
+    .chatbot-widget {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      font-family: Arial, sans-serif;
+      z-index: 9999;
+      display: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .chat-header {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+    }
+
+    .chat-body {
+      background-color: #fff;
+      max-height: 350px;
+      overflow: hidden;
+    }
+
+    .chat-container {
+      padding: 15px;
+      max-height: 250px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .chat-controls {
+      padding: 10px;
+      border-top: 1px solid #eee;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .bot-message,
+    .user-message {
+      max-width: 80%;
+      padding: 10px 14px;
+      border-radius: 15px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .bot-message {
+      background: #e3f2fd;
+      align-self: flex-start;
+    }
+
+    .user-message {
+      background: #0077cc;
+      color: white;
+      align-self: flex-end;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .profile-container {
+        padding: 20px;
+        margin: 40px 10px;
+      }
+
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-info h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Personal Profile Section -->
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="2.JPEG" alt="Profile Photo" class="profile-photo">
+      <div class="profile-info">
+        <h1>Yeshwant Shankar Jadhav</h1>
+        <h3>Procurement Specialist</h3>
+        <p>Hello! I’m a passionate Procurement Specialist with 9+ years of experience driving cost-effective sourcing and building strong supplier relationships. I thrive on optimizing procurement processes, negotiating smart deals, and continuously learning to stay ahead in the evolving supply chain landscape.</p>
+        <div class="contact-details">
+          <p><strong>Email:</strong> Yeshwantsjadhav@gmail.com</p>
+          <p><strong>Phone:</strong> +91-7709917611</p>
+          <p><strong>Location:</strong> Ulhasnagar,Thane, Maharashtra</p>
+        </div>
+        <a href="Resume.pdf" class="download-button" download>Download Resume</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Chat Icon -->
+  <div id="chatIcon" class="chat-icon" onclick="toggleChat(true)">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Chatbot" width="50">
+  </div>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot-widget" id="chatWidget">
+    <div class="chat-header">
+      <span>Chat with Me</span>
+      <button onclick="toggleChat(false)" style="float:right; background:none; border:none; font-size:16px; cursor:pointer;">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-container" id="chatContainer">
+        <div class="bot-message">Hi! Ask me anything about my profile.</div>
+      </div>
+      <div class="chat-controls">
+        <select id="question" onchange="handleUserSelection()">
+          <option value="">--Select a question--</option>
+          <option value="whyHire">Why should we hire you?</option>
+          <option value="strengths">What are your strengths?</option>
+          <option value="experience">Tell me about your experience.</option>
+          <option value="projects">Describe a project you've worked on.</option>
+          <option value="weakness">What is your biggest weakness?</option>
+          <option value="teamwork">How do you work in a team?</option>
+          <option value="challenge">Describe a challenging situation you faced.</option>
+          <option value="future">Where do you see yourself in 5 years?</option>
+          <option value="whyCompany">Why do you want to join our company?</option>
+          <option value="skills">What technical skills do you have?</option>
+          <option value="achievement">What’s your biggest professional achievement?</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat(show) {
+      document.getElementById('chatWidget').style.display = show ? 'block' : 'none';
+    }
+
+    function handleUserSelection() {
+      const question = document.getElementById('question').value;
+      const container = document.getElementById('chatContainer');
+
+      if (!question) return;
+
+      const userMsg = document.createElement('div');
+      userMsg.className = 'user-message';
+      userMsg.textContent = document.querySelector(`#question option[value="${question}"]`).textContent;
+      container.appendChild(userMsg);
+
+      const botMsg = document.createElement('div');
+      botMsg.className = 'bot-message';
+
+      const responses = {
+        whyHire: "With 9+ years of experience in procurement, I specialize in cost optimization, strategic sourcing, and building strong supplier relationships. I’ve successfully streamlined procurement processes, reduced costs, and always look for innovative ways to add value. My experience and adaptability ensure I can help your team achieve its procurement goals efficiently.",
+        strengths: "My strengths include strong negotiation skills, a keen eye for cost-saving opportunities, and building lasting supplier relationships. I’m analytical, detail-oriented, and adaptable, always looking to improve procurement processes and embrace new technologies.",
+        experience: "I have 9 years of experience in procurement, managing supplier relationships, optimizing costs, and streamlining procurement processes. I’ve successfully negotiated contracts, reduced expenses, and implemented strategies to improve efficiency and value for the organizations I’ve worked with.",
+        projects: "I have worked on several high-value projects, including one at Writer Corporation, where I managed procurement for a project worth around 95 crores. Additionally, I handled a project at Wintech to build a factory, which had a budget of approximately 10 crores. In both projects, I was responsible for sourcing materials, negotiating contracts, and ensuring cost efficiency throughout the procurement process.",
+        weakness: "Sometimes I overanalyze details, but I’m working on balancing perfection with speed.",
+        teamwork: "I enjoy collaborating and believe in open communication.",
+        challenge: "Once I had to fix a server issue overnight. I learned how to stay calm under pressure.",
+        future: "I see myself leading a development team and building impactful solutions.",
+        whyCompany: "Your mission aligns with my values and I admire your innovation culture.",
+        skills: "JavaScript, Python, HTML, SQL, Docker, Git, Project Management, Data Analysis, Google Looker Studio, Power BI, Microsoft Certified Professional Developer, AI Tools for Office Work Productivity",
+        achievement: "Building and deploying a New Technology product used by 10+ companies."
+      };
+
+      botMsg.textContent = responses[question] || "Let me think about that...";
+      setTimeout(() => {
+        container.appendChild(botMsg);
+        container.scrollTop = container.scrollHeight;
+      }, 600);
+    }
+  </script>
+</body>
+</html>
